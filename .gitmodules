@@ -1,0 +1,6 @@
+[submodule "Submodules/DbClient"]
+	path = Submodules/DbClient
+	url = https://github.com/awen221/DbClient.git
+[submodule "Submodules/OpenAPI"]
+	path = Submodules/OpenAPI
+	url = https://github.com/awen221/OpenAPI.git

@@ -1,0 +1,108 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Submodules", "Submodules", "{2D78E153-4697-4A41-9D2E-8C26F1750463}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OpenAPI", "OpenAPI", "{F608D23C-ED32-4D5A-9459-B7FB01623D1B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DbClient", "DbClient", "{92F1BA2D-FFA0-44AE-AE40-E28763AB8361}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Base", "_Base", "{E1E2732F-65E8-4DCF-9BD8-D88680343B46}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SqlServerClient", "SqlServerClient", "{68D3F841-44C0-4FDD-B961-F46C4EBA6CF0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".Net Standard", ".Net Standard", "{AC2266EF-FAD9-4C0D-93E3-CA5316B4C136}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SqlServerClient", "Submodules\DbClient\SqlServerClient\.Net Standard\SqlServerClient\SqlServerClient.csproj", "{AF344DAC-B336-43C6-B4DE-373E18D477F7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenAPI_Base", "Submodules\OpenAPI\OpenAPI_Base\OpenAPI_Base.csproj", "{7462736B-F43E-46B4-A01B-B0D52D94F2D0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenAPI_DbCommon", "OpenAPI_DbCommon\OpenAPI_DbCommon.csproj", "{8ED1798B-CD95-4E90-BF06-7BF056E01B8F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MySqlClient", "MySqlClient", "{668D842C-5AB8-4ECC-A62A-76A2EAFFA636}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OracleClient", "OracleClient", "{27A922CD-0509-427E-ACFB-8D531C7E61E0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".Net Standard", ".Net Standard", "{6354AC0E-9BDA-4874-B9C6-C36BA3FD4F73}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".Net Standard", ".Net Standard", "{034DA4C5-AFD3-4E89-894C-40B18901CB08}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MySqlClient", "Submodules\DbClient\MySqlClient\.Net Standard\MySqlClient\MySqlClient.csproj", "{BBB71660-93DA-42A1-A3DB-ED209B2B28E3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OracleClient", "Submodules\DbClient\OracleClient\.Net Standard\OracleClient\OracleClient.csproj", "{6B40F01A-A1DF-49DE-9C47-8EE4E41632D6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DbClient", "Submodules\DbClient\_Base\DbClient\DbClient.csproj", "{0A5D2384-5263-42C7-B718-270A2EE8BC6C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestClient_OpenAPI_DbCommon", "RestClient_OpenAPI_DbCommon\RestClient_OpenAPI_DbCommon.csproj", "{59AE785D-D090-4447-BB16-26A59580585B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestClient_OpenAPI_DbCommon_Test", "RestClient_OpenAPI_DbCommon_Test\RestClient_OpenAPI_DbCommon_Test.csproj", "{09E1DDFE-715F-46F3-90F8-A8FA8C2B4051}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Submodules\DbClient\OracleClient\OracleClient\OracleClient.projitems*{6b40f01a-a1df-49de-9c47-8ee4e41632d6}*SharedItemsImports = 5
+		Submodules\DbClient\SqlServerClient\SqlServerClient\SqlServerClient.projitems*{af344dac-b336-43c6-b4de-373e18d477f7}*SharedItemsImports = 5
+		Submodules\DbClient\MySqlClient\MySqlClient\MySqlClient.projitems*{bbb71660-93da-42a1-a3db-ed209b2b28e3}*SharedItemsImports = 5
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF344DAC-B336-43C6-B4DE-373E18D477F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF344DAC-B336-43C6-B4DE-373E18D477F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF344DAC-B336-43C6-B4DE-373E18D477F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF344DAC-B336-43C6-B4DE-373E18D477F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7462736B-F43E-46B4-A01B-B0D52D94F2D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7462736B-F43E-46B4-A01B-B0D52D94F2D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7462736B-F43E-46B4-A01B-B0D52D94F2D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7462736B-F43E-46B4-A01B-B0D52D94F2D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8ED1798B-CD95-4E90-BF06-7BF056E01B8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8ED1798B-CD95-4E90-BF06-7BF056E01B8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8ED1798B-CD95-4E90-BF06-7BF056E01B8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8ED1798B-CD95-4E90-BF06-7BF056E01B8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBB71660-93DA-42A1-A3DB-ED209B2B28E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBB71660-93DA-42A1-A3DB-ED209B2B28E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBB71660-93DA-42A1-A3DB-ED209B2B28E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBB71660-93DA-42A1-A3DB-ED209B2B28E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B40F01A-A1DF-49DE-9C47-8EE4E41632D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B40F01A-A1DF-49DE-9C47-8EE4E41632D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B40F01A-A1DF-49DE-9C47-8EE4E41632D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B40F01A-A1DF-49DE-9C47-8EE4E41632D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A5D2384-5263-42C7-B718-270A2EE8BC6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A5D2384-5263-42C7-B718-270A2EE8BC6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A5D2384-5263-42C7-B718-270A2EE8BC6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A5D2384-5263-42C7-B718-270A2EE8BC6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59AE785D-D090-4447-BB16-26A59580585B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59AE785D-D090-4447-BB16-26A59580585B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59AE785D-D090-4447-BB16-26A59580585B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59AE785D-D090-4447-BB16-26A59580585B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09E1DDFE-715F-46F3-90F8-A8FA8C2B4051}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09E1DDFE-715F-46F3-90F8-A8FA8C2B4051}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09E1DDFE-715F-46F3-90F8-A8FA8C2B4051}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09E1DDFE-715F-46F3-90F8-A8FA8C2B4051}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F608D23C-ED32-4D5A-9459-B7FB01623D1B} = {2D78E153-4697-4A41-9D2E-8C26F1750463}
+		{92F1BA2D-FFA0-44AE-AE40-E28763AB8361} = {2D78E153-4697-4A41-9D2E-8C26F1750463}
+		{E1E2732F-65E8-4DCF-9BD8-D88680343B46} = {92F1BA2D-FFA0-44AE-AE40-E28763AB8361}
+		{68D3F841-44C0-4FDD-B961-F46C4EBA6CF0} = {92F1BA2D-FFA0-44AE-AE40-E28763AB8361}
+		{AC2266EF-FAD9-4C0D-93E3-CA5316B4C136} = {68D3F841-44C0-4FDD-B961-F46C4EBA6CF0}
+		{AF344DAC-B336-43C6-B4DE-373E18D477F7} = {AC2266EF-FAD9-4C0D-93E3-CA5316B4C136}
+		{7462736B-F43E-46B4-A01B-B0D52D94F2D0} = {F608D23C-ED32-4D5A-9459-B7FB01623D1B}
+		{668D842C-5AB8-4ECC-A62A-76A2EAFFA636} = {92F1BA2D-FFA0-44AE-AE40-E28763AB8361}
+		{27A922CD-0509-427E-ACFB-8D531C7E61E0} = {92F1BA2D-FFA0-44AE-AE40-E28763AB8361}
+		{6354AC0E-9BDA-4874-B9C6-C36BA3FD4F73} = {668D842C-5AB8-4ECC-A62A-76A2EAFFA636}
+		{034DA4C5-AFD3-4E89-894C-40B18901CB08} = {27A922CD-0509-427E-ACFB-8D531C7E61E0}
+		{BBB71660-93DA-42A1-A3DB-ED209B2B28E3} = {6354AC0E-9BDA-4874-B9C6-C36BA3FD4F73}
+		{6B40F01A-A1DF-49DE-9C47-8EE4E41632D6} = {034DA4C5-AFD3-4E89-894C-40B18901CB08}
+		{0A5D2384-5263-42C7-B718-270A2EE8BC6C} = {E1E2732F-65E8-4DCF-9BD8-D88680343B46}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FE44844F-53C3-47CB-BA1D-9F360FC27532}
+	EndGlobalSection
+EndGlobal
