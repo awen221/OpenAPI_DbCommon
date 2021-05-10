@@ -1,8 +1,9 @@
-﻿using RestSharp;
+﻿using System.Data;
 
-using DbClient;
+using RestSharp;
+
 using Newtonsoft.Json;
-using System.Data;
+using OpenAPI_DbCommon.Code;
 
 namespace RestClient_OpenAPI_DbCommon
 {
@@ -11,7 +12,7 @@ namespace RestClient_OpenAPI_DbCommon
         string BaseUrl { get; } = string.Empty;
         public DbCommonClient(string baseUrl) { BaseUrl = baseUrl; }
 
-        public class DbCommon : Db_interface
+        public class DbCommon
         {
             string BaseAddress { set; get; }
             string controller { set; get; }
@@ -21,27 +22,29 @@ namespace RestClient_OpenAPI_DbCommon
                 controller = controllerName;
             }
 
-            object Process<TResult>(string connectString, string commandText, string action)
+
+            TResult Process<TResult>(string ConnectionString, string CommandText, string action)
             {
                 RestClient restClient = new RestClient(BaseAddress);
                 RestRequest restRequest = new RestRequest($"/{controller}/{action}", Method.POST, DataFormat.Json);
 
-                restRequest.AddQueryParameter(nameof(connectString), connectString);
-                restRequest.AddQueryParameter(nameof(commandText), commandText);
+                restRequest.AddParameter(nameof(DbCommonArgs_interface.ConnectionString), ConnectionString);
+                restRequest.AddParameter(nameof(DbCommonArgs_interface.CommandText), CommandText);
 
                 var response = restClient.Execute(restRequest);
-                string str = JsonConvert.DeserializeObject<string>(response.Content);
                 
-                return JsonConvert.DeserializeObject<TResult>(str);
+                return JsonConvert.DeserializeObject<TResult>(response.Content);
             }
-            public object DataAdapter_Fill_DataSet(string connectString, string commandText)
-                => Process<DataSet>(connectString, commandText, nameof(DataAdapter_Fill_DataSet));
-            public object DataAdapter_Fill_DataTable(string connectString, string commandText)
-                => Process<DataTable>(connectString, commandText, nameof(DataAdapter_Fill_DataTable));
-            public object DataReader_HasRows(string connectString, string commandText)
-                => Process<bool>(connectString, commandText, nameof(DataReader_HasRows));
-            public object ExecuteNonQuery(string connectString, string commandText)
-                => Process<int>(connectString, commandText, nameof(ExecuteNonQuery));
+            public DataSet DataAdapter_Fill_DataSet(string ConnectionString, string CommandText)
+                => JsonConvert.DeserializeObject<DataSet>(
+                    Process<string>(ConnectionString, CommandText, nameof(DataAdapter_Fill_DataSet)));
+            public DataTable DataAdapter_Fill_DataTable(string ConnectionString, string CommandText)
+                => JsonConvert.DeserializeObject<DataTable>(
+                    Process<string>(ConnectionString, CommandText, nameof(DataAdapter_Fill_DataTable)));
+            public bool DataReader_HasRows(string ConnectionString, string CommandText)
+                => Process<bool>(ConnectionString, CommandText, nameof(DataReader_HasRows));
+            public int ExecuteNonQuery(string ConnectionString, string CommandText)
+                => Process<int>(ConnectionString, CommandText, nameof(ExecuteNonQuery));
         }
 
         public DbCommon SqlServer => new DbCommon(BaseUrl, nameof(SqlServer));

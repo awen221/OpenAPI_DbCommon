@@ -5,12 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-    <PackageReference Include="RestSharp" Version="106.11.7" />
+    <Compile Include="..\OpenAPI_DbCommon\Code\DbCommonArgs_interface.cs" Link="DbCommonArgs_interface.cs" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Submodules\DbClient\_Base\DbClient\DbClient.csproj" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="RestSharp" Version="106.11.7" />
   </ItemGroup>
 
 </Project>

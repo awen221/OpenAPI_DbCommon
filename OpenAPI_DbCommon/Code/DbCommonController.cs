@@ -1,5 +1,4 @@
-﻿using System.Data;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
 using Newtonsoft.Json;
 
@@ -9,36 +8,32 @@ namespace OpenAPI_DbCommon.Code
 {
     [Route("[controller]/[action]")]
     [ApiController]
-    public class DbCommonController<T_Db> : Controller, Db_interface
+    public class DbCommonController<T_Db> : Controller
         where T_Db : Db_interface, new()
     {
         [HttpPost]
-        public object DataAdapter_Fill_DataTable(string connectString, string commandText)
+        public string DataAdapter_Fill_DataTable([FromForm]DbCommonArgs args)
         {
-            var result = (DataTable)new T_Db().DataAdapter_Fill_DataTable(connectString, commandText);
-            var resultJson = JsonConvert.SerializeObject(result);
-            return Ok(resultJson);
+            var result = new T_Db().DataAdapter_Fill_DataTable(args.ConnectionString, args.CommandText);
+            var JsonString = JsonConvert.SerializeObject(result);
+            return JsonString;
         }
         [HttpPost]
-        public object DataAdapter_Fill_DataSet(string connectString, string commandText)
+        public string DataAdapter_Fill_DataSet([FromForm] DbCommonArgs args)
         {
-            var result = (DataSet)new T_Db().DataAdapter_Fill_DataSet(connectString, commandText);
-            var resultJson = JsonConvert.SerializeObject(result);
-            return Ok(resultJson);
+            var result = new T_Db().DataAdapter_Fill_DataSet(args.ConnectionString, args.CommandText);
+            var JsonString = JsonConvert.SerializeObject(result);
+            return JsonString;
         }
         [HttpPost]
-        public object DataReader_HasRows(string connectString, string commandText)
+        public bool DataReader_HasRows([FromForm] DbCommonArgs args)
         {
-            var result = (bool)new T_Db().DataReader_HasRows(connectString, commandText);
-            var resultJson = JsonConvert.SerializeObject(result);
-            return Ok(resultJson);
+            return new T_Db().DataReader_HasRows(args.ConnectionString, args.CommandText);
         }
         [HttpPost]
-        public object ExecuteNonQuery(string connectString, string commandText)
+        public int ExecuteNonQuery([FromForm] DbCommonArgs args)
         {
-            var result = (int)new T_Db().ExecuteNonQuery(connectString, commandText);
-            var resultJson = JsonConvert.SerializeObject(result);
-            return Ok(resultJson);
+            return new T_Db().ExecuteNonQuery(args.ConnectionString, args.CommandText);
         }
     }
 }

@@ -39,11 +39,20 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestClient_OpenAPI_DbCommon
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestClient_OpenAPI_DbCommon_Test", "RestClient_OpenAPI_DbCommon_Test\RestClient_OpenAPI_DbCommon_Test.csproj", "{09E1DDFE-715F-46F3-90F8-A8FA8C2B4051}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "MySqlClient", "Submodules\DbClient\MySqlClient\MySqlClient\MySqlClient.shproj", "{C15E578D-2DDA-4498-A7E8-810226605B8A}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "OracleClient", "Submodules\DbClient\OracleClient\OracleClient\OracleClient.shproj", "{363A96CA-8868-42F1-ACF6-4C6CC1DDD935}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SqlServerClient", "Submodules\DbClient\SqlServerClient\SqlServerClient\SqlServerClient.shproj", "{95CCE6EE-7C5E-4962-AE7E-DB151EACE53D}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Submodules\DbClient\OracleClient\OracleClient\OracleClient.projitems*{363a96ca-8868-42f1-acf6-4c6cc1ddd935}*SharedItemsImports = 13
 		Submodules\DbClient\OracleClient\OracleClient\OracleClient.projitems*{6b40f01a-a1df-49de-9c47-8ee4e41632d6}*SharedItemsImports = 5
+		Submodules\DbClient\SqlServerClient\SqlServerClient\SqlServerClient.projitems*{95cce6ee-7c5e-4962-ae7e-db151eace53d}*SharedItemsImports = 13
 		Submodules\DbClient\SqlServerClient\SqlServerClient\SqlServerClient.projitems*{af344dac-b336-43c6-b4de-373e18d477f7}*SharedItemsImports = 5
 		Submodules\DbClient\MySqlClient\MySqlClient\MySqlClient.projitems*{bbb71660-93da-42a1-a3db-ed209b2b28e3}*SharedItemsImports = 5
+		Submodules\DbClient\MySqlClient\MySqlClient\MySqlClient.projitems*{c15e578d-2dda-4498-a7e8-810226605b8a}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -101,6 +110,9 @@ Global
 		{BBB71660-93DA-42A1-A3DB-ED209B2B28E3} = {6354AC0E-9BDA-4874-B9C6-C36BA3FD4F73}
 		{6B40F01A-A1DF-49DE-9C47-8EE4E41632D6} = {034DA4C5-AFD3-4E89-894C-40B18901CB08}
 		{0A5D2384-5263-42C7-B718-270A2EE8BC6C} = {E1E2732F-65E8-4DCF-9BD8-D88680343B46}
+		{C15E578D-2DDA-4498-A7E8-810226605B8A} = {668D842C-5AB8-4ECC-A62A-76A2EAFFA636}
+		{363A96CA-8868-42F1-ACF6-4C6CC1DDD935} = {27A922CD-0509-427E-ACFB-8D531C7E61E0}
+		{95CCE6EE-7C5E-4962-AE7E-DB151EACE53D} = {68D3F841-44C0-4FDD-B961-F46C4EBA6CF0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FE44844F-53C3-47CB-BA1D-9F360FC27532}
