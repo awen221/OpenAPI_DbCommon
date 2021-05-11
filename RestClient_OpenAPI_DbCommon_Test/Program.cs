@@ -1,5 +1,6 @@
-﻿using RestClient_OpenAPI_DbCommon;
-using System;
+﻿using System;
+
+using RestClient_OpenAPI_DbCommon;
 
 namespace RestClient_OpenAPI_DbCommon_Test
 {

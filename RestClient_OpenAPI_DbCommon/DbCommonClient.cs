@@ -36,11 +36,9 @@ namespace RestClient_OpenAPI_DbCommon
                 return JsonConvert.DeserializeObject<TResult>(response.Content);
             }
             public DataSet DataAdapter_Fill_DataSet(string ConnectionString, string CommandText)
-                => JsonConvert.DeserializeObject<DataSet>(
-                    Process<string>(ConnectionString, CommandText, nameof(DataAdapter_Fill_DataSet)));
+                => Process<DataSet>(ConnectionString, CommandText, nameof(DataAdapter_Fill_DataSet));
             public DataTable DataAdapter_Fill_DataTable(string ConnectionString, string CommandText)
-                => JsonConvert.DeserializeObject<DataTable>(
-                    Process<string>(ConnectionString, CommandText, nameof(DataAdapter_Fill_DataTable)));
+                => Process<DataTable>(ConnectionString, CommandText, nameof(DataAdapter_Fill_DataTable));
             public bool DataReader_HasRows(string ConnectionString, string CommandText)
                 => Process<bool>(ConnectionString, CommandText, nameof(DataReader_HasRows));
             public int ExecuteNonQuery(string ConnectionString, string CommandText)
