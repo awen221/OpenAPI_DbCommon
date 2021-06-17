@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Program.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.2.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Submodules\DbClient\MySqlClient\.Net Standard\MySqlClient\MySqlClient.csproj" />
+    <ProjectReference Include="..\Submodules\DbClient\OracleClient\.Net Standard\OracleClient\OracleClient.csproj" />
+    <ProjectReference Include="..\Submodules\DbClient\SqlServerClient\.Net Standard\SqlServerClient\SqlServerClient.csproj" />
+    <ProjectReference Include="..\Submodules\DbClient\_Base\DbClient\DbClient.csproj" />
+    <ProjectReference Include="..\Submodules\OpenAPI\OpenAPI_Base\OpenAPI_Base.csproj" />
+  </ItemGroup>
+
+</Project>

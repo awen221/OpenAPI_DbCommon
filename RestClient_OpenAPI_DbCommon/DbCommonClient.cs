@@ -1,9 +1,9 @@
 ﻿using System.Data;
 
 using RestSharp;
-
 using Newtonsoft.Json;
-using OpenAPI_DbCommon.Code;
+
+using OpenAPI_DbCommonBase.Code;
 
 namespace RestClient_OpenAPI_DbCommon
 {
@@ -28,8 +28,8 @@ namespace RestClient_OpenAPI_DbCommon
                 RestClient restClient = new RestClient(BaseAddress);
                 RestRequest restRequest = new RestRequest($"/{controller}/{action}", Method.POST, DataFormat.Json);
 
-                restRequest.AddParameter(nameof(DbCommonArgs_interface.ConnectionString), ConnectionString);
-                restRequest.AddParameter(nameof(DbCommonArgs_interface.CommandText), CommandText);
+                restRequest.AddParameter(nameof(IDbCommonArgs_interface.ConnectionString), ConnectionString);
+                restRequest.AddParameter(nameof(IDbCommonArgs_interface.CommandText), CommandText);
 
                 var response = restClient.Execute(restRequest);
                 

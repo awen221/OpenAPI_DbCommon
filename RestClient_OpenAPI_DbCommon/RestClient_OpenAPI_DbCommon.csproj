@@ -10,7 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="..\OpenAPI_DbCommon\Code\DbCommonArgs_interface.cs" Link="DbCommonArgs_interface.cs" />
+    <Compile Include="..\OpenAPI_DbCommonBase\Code\IDbCommonArgs_interface.cs" Link="IDbCommonArgs_interface.cs" />
   </ItemGroup>
 
   <ItemGroup>

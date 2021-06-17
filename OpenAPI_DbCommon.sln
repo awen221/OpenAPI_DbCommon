@@ -45,6 +45,8 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "OracleClient", "Submodules\
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SqlServerClient", "Submodules\DbClient\SqlServerClient\SqlServerClient\SqlServerClient.shproj", "{95CCE6EE-7C5E-4962-AE7E-DB151EACE53D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenAPI_DbCommonBase", "OpenAPI_DbCommonBase\OpenAPI_DbCommonBase.csproj", "{95B37E1E-83E4-431C-A9B9-7F59DCA82473}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Submodules\DbClient\OracleClient\OracleClient\OracleClient.projitems*{363a96ca-8868-42f1-acf6-4c6cc1ddd935}*SharedItemsImports = 13
@@ -91,6 +93,10 @@ Global
 		{09E1DDFE-715F-46F3-90F8-A8FA8C2B4051}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09E1DDFE-715F-46F3-90F8-A8FA8C2B4051}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09E1DDFE-715F-46F3-90F8-A8FA8C2B4051}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95B37E1E-83E4-431C-A9B9-7F59DCA82473}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95B37E1E-83E4-431C-A9B9-7F59DCA82473}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95B37E1E-83E4-431C-A9B9-7F59DCA82473}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95B37E1E-83E4-431C-A9B9-7F59DCA82473}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
