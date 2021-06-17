@@ -1,12 +1,14 @@
 namespace OpenAPI_DbCommon
 {
+    using Microsoft.AspNetCore.Builder;
+    using Microsoft.AspNetCore.Hosting;
     using Microsoft.OpenApi.Models;
     public class Startup : OpenAPI_Base.Startup
     {
         /// <summary>
         /// 
         /// </summary>
-        protected override void Init() => base.Init();
+        public override void Configure(IApplicationBuilder app, IWebHostEnvironment env) => base.Configure(app, env);
         /// <summary>
         /// 
         /// </summary>
