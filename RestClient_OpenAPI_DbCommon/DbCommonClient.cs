@@ -15,18 +15,18 @@ namespace RestClient_OpenAPI_DbCommon
         public class DbCommon
         {
             string BaseAddress { set; get; }
-            string controller { set; get; }
+            string Controller { set; get; }
             public DbCommon(string baseAdder, string controllerName)
             {
                 BaseAddress = baseAdder;
-                controller = controllerName;
+                Controller = controllerName;
             }
 
 
             TResult Process<TResult>(string ConnectionString, string CommandText, string action)
             {
                 RestClient restClient = new RestClient(BaseAddress);
-                RestRequest restRequest = new RestRequest($"/{controller}/{action}", Method.POST, DataFormat.Json);
+                RestRequest restRequest = new RestRequest($"/{Controller}/{action}", Method.POST, DataFormat.Json);
 
                 restRequest.AddParameter(nameof(IDbCommonArgs_interface.ConnectionString), ConnectionString);
                 restRequest.AddParameter(nameof(IDbCommonArgs_interface.CommandText), CommandText);
