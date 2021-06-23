@@ -21,10 +21,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\OpenAPI_DbCommonBase\OpenAPI_DbCommonBase.csproj" />
-    <ProjectReference Include="..\Submodules\DbClient\MySqlClient\.Net Standard\MySqlClient\MySqlClient.csproj" />
-    <ProjectReference Include="..\Submodules\DbClient\OracleClient\.Net Standard\OracleClient\OracleClient.csproj" />
-    <ProjectReference Include="..\Submodules\DbClient\SqlServerClient\.Net Standard\SqlServerClient\SqlServerClient.csproj" />
-    <ProjectReference Include="..\Submodules\OpenAPI\OpenAPI_Base\OpenAPI_Base.csproj" />
   </ItemGroup>
 
 </Project>
